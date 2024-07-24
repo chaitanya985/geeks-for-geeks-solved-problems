@@ -3,25 +3,25 @@
 class Solution:
     def findTwoElement( self,arr, n): 
         # code here
-        seen = set()
+        seen=set()
         
-        repeat = 0
+        repeat=0
         
-        total_sum = n * (n + 1) // 2
+        total_sum=n*(n+1)//2
         
-        array_sum = sum(arr)
+        max_sum=sum(arr)
         
         for num in arr:
-        
+            
             if num in seen:
-        
-                repeat = num
-        
+                
+                repeat=num
+                
             seen.add(num)
         
-        missing = total_sum - (array_sum - repeat)
+        missing=total_sum - (max_sum - repeat)
         
-        return [repeat, missing]
+        return[repeat, missing]
 
 
 #{ 
