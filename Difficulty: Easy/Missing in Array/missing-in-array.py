@@ -5,10 +5,11 @@ class Solution:
     def missingNumber(self, n, arr):
         
         # code here
-        total=n*(n+1)//2
+        total=(n*(n+1)) // 2
         
-        return total-sum(arr)
-
+        sum_arr = sum(arr)
+        
+        return total - sum_arr
 
 
 #{ 
