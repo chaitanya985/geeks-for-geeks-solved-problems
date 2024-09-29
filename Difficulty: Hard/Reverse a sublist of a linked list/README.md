@@ -1,0 +1,14 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/reverse-a-sublist-of-a-linked-list/1?page=1&difficulty%5B%5D=2&category%5B%5D=Linked%2520List&sortBy=submissions">Reverse a sublist of a linked list</a></h2><h3>Difficulty Level : Difficulty: Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 12pt;">Given a linked list and positions a and b. Reverse the linked list from position a to b and return the head of the resultant linked list.</span></p>
+<p><span style="font-size: 12pt;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 12pt;"><strong>Input: </strong>a = 1, b = 8,<strong> </strong>Linked List = 1-&gt;7-&gt;5-&gt;3-&gt;9-&gt;8-&gt;10-&gt;2-&gt;2-&gt;5-&gt;NULL
+<strong>Output:</strong> 2 10 8 9 3 5 7 1 2 5<br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/706396/Web/Other/blobid0_1722777839.png" width="503" height="88"><br><strong>Explanation: </strong>The nodes from position 1 to 8 are reversed, resulting in 2 10 8 9 3 5 7 1 2 5.
+</span></pre>
+<pre><span style="font-size: 12pt;"><strong>Input: </strong>a = 2, b = 4,<strong> </strong>Linked List = 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;NULL
+<strong>Output:</strong> 1 4 3 2 5 6<br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/706396/Web/Other/blobid1_1722777850.png" width="502" height="88"><br><strong>Explanation: </strong>Nodes from position 2 to 4 are reversed resulting in 1 4 3 2 5 6.</span></pre>
+<div><span style="font-size: 12pt;"><strong>Expected Time Complexity:</strong> O(n)</span></div>
+<div><span style="font-size: 12pt;"><strong>Expected Space </strong><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Complexity</strong><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">: </strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">O(1)</span></span></div>
+<div>&nbsp;</div>
+<div><span style="font-size: 12pt;"><strong>Constraints:</strong></span></div>
+<div><span style="font-size: 12pt;">1&lt;= size of linked list &lt;=10^5</span></div>
+<div><span style="font-size: 12pt;">1&lt;= a&lt;=b&lt;= size of linked list</span></div>
+<div><span style="font-size: 12pt;">1&lt;= data of nodes &lt;=10<sup>9</sup></span></div></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Microsoft</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Linked List</code>&nbsp;<code>Data Structures</code>&nbsp;
