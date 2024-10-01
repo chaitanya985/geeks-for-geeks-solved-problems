@@ -13,11 +13,13 @@ class MyStack:
     #Function to remove an item from top of the stack.
     def pop(self):
         #add code here
-        if len(self.arr)==0:
+        if self.arr==[]:
             
             return -1
             
-        return self.arr.pop()
+        else:
+            
+            return self.arr.pop()
         
         
 
