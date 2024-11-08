@@ -1,57 +1,44 @@
-#User function Template for python3
-
+# User function Template for python3
 
 class Solution:
-    def nextLargerElement(self,arr,n):
-        #code here
+    # Function to find the next greater element for each element of the array.
+    def nextLargerElement(self, arr):
+        # code here
         
-        stack=[]
+        res=[]
         
-        count=[0]*n
-        
-        for i in range(n-1, -1, -1):
+        for i in range(len(arr)):
             
-            while len(stack) != 0 and stack[-1] <= arr[i]:
+            for j in range(i+1, len(arr)):
                 
-                stack.pop()
+                if arr[j]>arr[i]:
+                    
+                    res.append(arr[j])
+                    
+                    break
                 
-            if len(stack)==0:
-                
-                count[i]=-1
-                
-            else:
-                count[i]=stack[-1]
-                
-            stack.append(arr[i])
-            
-        return count
+                if j==len(arr)-1:
+                    
+                    res.append(-1)
+                    
+        res.append(-1)
+        
+        return res
+
 
 #{ 
  # Driver Code Starts
-#Initial Template for Python 3
-import atexit
-import io
-import sys
+# Initial Template for Python 3
 
-_INPUT_LINES = sys.stdin.read().splitlines()
-input = iter(_INPUT_LINES).__next__
-_OUTPUT_BUFFER = io.StringIO()
-sys.stdout = _OUTPUT_BUFFER
+t = int(input())  # number of test cases
+for _ in range(t):
+    arr = list(map(int, input().split()))  # input array
+    s = Solution().nextLargerElement(arr)  # find the next greater elements
 
-@atexit.register
-
-def write():
-    sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-
-if __name__ == '__main__':
-    test_cases = int(input())
-    for cases in range(test_cases) :
-        n = int(input())
-
-        a = list(map(int,input().strip().split()))
-        obj = Solution()
-        res = obj.nextLargerElement(a,n)
-        for i in range (len (res)):
-            print (res[i], end = " ")
-        print ()
+    # Output formatting
+    if s:
+        print(" ".join(map(str, s)))  # Print next greater elements
+    else:
+        print("[]")  # Print empty list if no next greater element is found
+    print("~")
 # } Driver Code Ends
