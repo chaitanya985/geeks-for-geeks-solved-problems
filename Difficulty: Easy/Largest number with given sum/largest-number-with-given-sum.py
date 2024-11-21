@@ -1,37 +1,27 @@
 #User function Template for python3
 
 class Solution:
-    #Function to return the largest possible number of n digits
-    #with sum equal to given sum.
+    
     def largestNum(self,n,s):
         
         # code here
+        if s < 0 or s > 9 * n:
+            
+            return "-1"
         
-        if (s==0 and n==1):
-            
-            return '0'
-            
-        if (s>9*n):
-            
-            return '-1'
-            
-        password=[]
+        result = []
         
         for i in range(n):
             
-            if s>9:
-                
-                password.append('9')
-                
-                s-=9
-                
-            else:
-                
-                password.append(str(s))
-                
-                s=0
-                
-        return ''.join(password)
+            digit = min(9, s)
+            
+            result.append(str(digit))
+            
+            s -= digit  
+            
+        return ''.join(result)
+
+sol = Solution()
     
     
 
@@ -51,4 +41,5 @@ if __name__ == '__main__':
         n,s = map(int,input().strip().split())
         ob = Solution()
         print(ob.largestNum(n,s))
+        print("~")
 # } Driver Code Ends
